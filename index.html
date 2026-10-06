@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanva Tech – Modern Solopreneur Portfolio</title>
+  <meta name="description" content="Tanva Tech — crafting modern digital experiences. Solo developer & designer building apps like DoWheels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #d96d00;
+      --primary-light: #f58a2e;
+      --primary-glow: rgba(217, 109, 0, 0.15);
+      --text: #1a1a1a;
+      --muted: #5a5a5a;
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --border: #eae6e1;
+      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.04);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --transition: 0.25s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ---------- UTILITY ---------- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(217, 109, 0, 0.08);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    h2 span {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    /* ---------- HEADER / NAV ---------- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 249, 247, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(230, 226, 221, 0.6);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 4px 14px rgba(217, 109, 0, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--text);
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all var(--transition) !important;
+      border: 1px solid var(--text);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary) !important;
+      border-color: var(--primary) !important;
+      color: #fff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(217, 109, 0, 0.25);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: var(--text);
+      padding: 6px;
+      line-height: 1;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(217, 109, 0, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px 6px 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5.5vw, 68px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(217, 109, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #c25f00;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(217, 109, 0, 0.35);
+    }
+
+    .btn-outline {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 42px;
+    }
+
+    .stat-item .number {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .stat-item .label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* hero visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .visual-card {
+      width: 100%;
+      max-width: 400px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      z-index: 2;
+      transition: transform var(--transition);
+    }
+
+    .visual-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .visual-card .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(217, 109, 0, 0.3);
+    }
+
+    .visual-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .visual-card .app-desc {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .visual-card .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .feature-row .check {
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .visual-card .card-footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .visual-card .card-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .visual-card .card-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* floating decorations */
+    .float-badge {
+      position: absolute;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      z-index: 3;
+      animation: float 6s ease-in-out infinite;
+      white-space: nowrap;
+    }
+
+    .float-badge.b1 {
+      top: 8%;
+      right: -5%;
+      animation-delay: 0s;
+    }
+
+    .float-badge.b2 {
+      bottom: 12%;
+      left: -8%;
+      animation-delay: 2s;
+    }
+
+    .float-badge.b3 {
+      bottom: 30%;
+      right: -12%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ---------- SERVICES ---------- */
+    .services {
+      padding: 80px 0 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 34px 28px;
+      transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(217, 109, 0, 0.2);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(217, 109, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ---------- WORK / PROJECT ---------- */
+    .work {
+      padding: 60px 0 80px;
+    }
+
+    .project-showcase {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition);
+    }
+
+    .project-showcase:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-info .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: rgba(217, 109, 0, 0.08);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .project-info h3 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .project-info p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .project-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .project-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone-mock {
+      width: 220px;
+      height: 420px;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: 36px;
+      padding: 12px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .phone-mock .notch {
+      width: 60px;
+      height: 6px;
+      background: var(--border);
+      border-radius: 100px;
+      margin: 0 auto 12px;
+    }
+
+    .phone-mock .screen {
+      width: 100%;
+      height: calc(100% - 20px);
+      background: var(--surface);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .phone-mock .screen .app-logo-sm {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .phone-mock .screen .line {
+      width: 80%;
+      height: 10px;
+      background: var(--border);
+      border-radius: 100px;
+    }
+
+    .phone-mock .screen .line.short {
+      width: 50%;
+    }
+
+    .phone-mock .screen .pill {
+      width: 70%;
+      height: 34px;
+      background: rgba(217, 109, 0, 0.1);
+      border-radius: 100px;
+      border: 1px solid rgba(217, 109, 0, 0.15);
+    }
+
+    /* ---------- ABOUT / SOLO ---------- */
+    .about {
+      padding: 40px 0 80px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-avatar {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg, #fff, #f5f0eb);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: var(--shadow-md);
+      margin: 0 auto;
+    }
+
+    .about-avatar .initials {
+      font-size: 72px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .about-avatar .status-ring {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      background: #22c55e;
+      border-radius: 50%;
+      border: 3px solid var(--surface);
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.4);
+    }
+
+    .about-content h3 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .about-tags span {
+      font-size: 13px;
+      font-weight: 500;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 16px;
+      border-radius: 100px;
+      color: var(--muted);
+      transition: all var(--transition);
+    }
+
+    .about-tags span:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact {
+      padding: 40px 0 80px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 64px 48px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(217, 109, 0, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .contact-card h2 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-card .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      transition: all var(--transition);
+      position: relative;
+      z-index: 1;
+      margin-top: 8px;
+    }
+
+    .contact-email:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(217, 109, 0, 0.12);
+    }
+
+    .contact-note {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-left {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer-left strong {
+      color: var(--text);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .visual-card {
+        max-width: 100%;
+      }
+
+      .float-badge.b3 {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .project-showcase {
+        grid-template-columns: 1fr;
+        padding: 36px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-avatar {
+        max-width: 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        gap: 28px;
+      }
+
+      .stat-item .number {
+        font-size: 22px;
+      }
+
+      .contact-card {
+        padding: 40px 24px;
+      }
+
+      .float-badge {
+        display: none;
+      }
+
+      .project-showcase {
+        padding: 24px;
+      }
+
+      .project-info h3 {
+        font-size: 26px;
+      }
+
+      .phone-mock {
+        width: 180px;
+        height: 360px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 120px 0 60px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .contact-email {
+        font-size: 14px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">T</span>
+        Tanva Tech
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for new projects
+        </div>
+        <h1>
+          Crafting digital<br />
+          products with <span class="highlight">purpose</span>
+        </h1>
+        <p>
+          Tanva Tech is a solopreneur studio building modern mobile apps and
+          digital experiences. From concept to launch, I handle design,
+          development, and everything in between.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Start a project
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#work" class="btn btn-outline">See my work</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="number">5+</div>
+            <div class="label">Years crafting</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">12+</div>
+            <div class="label">Projects shipped</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">100%</div>
+            <div class="label">Solo powered</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="float-badge b1">⚡ Fast delivery</div>
+        <div class="float-badge b2">📱 Mobile first</div>
+        <div class="float-badge b3">🔒 Privacy focused</div>
+        <div class="visual-card">
+          <div class="app-icon">D</div>
+          <h3>DoWheels</h3>
+          <p class="app-desc">
+            A streamlined vehicle service document manager. Capture, store, and
+            access important documents — all locally on your device.
+          </p>
+          <div class="feature-row">
+            <span class="check">✓</span> No account required
+          </div>
+          <div class="feature-row">
+            <span class="check">✓</span> Local storage only
+          </div>
+          <div class="feature-row">
+            <span class="check">✓</span> Optional Google Sign-In
+          </div>
+          <div class="card-footer">
+            Built with privacy in mind · <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <span class="section-label">What I do</span>
+      <h2>Services built for <span>impact</span></h2>
+      <p class="section-sub">
+        End-to-end product development — from the first sketch to the final
+        release. Every detail is handled with care.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Mobile App Development</h3>
+          <p>
+            Native and cross-platform apps built for performance, usability,
+            and scale. From MVP to production-ready products.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Clean, modern interfaces that feel intuitive. Every screen is
+            designed with the user in mind — no clutter, just clarity.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Product Strategy</h3>
+          <p>
+            From idea validation to feature prioritization — I help shape your
+            product vision into a concrete, actionable roadmap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WORK ========== -->
+  <section class="work" id="work">
+    <div class="container">
+      <span class="section-label">Featured work</span>
+      <h2>Products I've <span>built</span></h2>
+      <p class="section-sub">
+        A selection of projects that showcase my approach to building modern,
+        user-focused digital products.
+      </p>
+
+      <div class="project-showcase">
+        <div class="project-info">
+          <span class="tag">Mobile App</span>
+          <h3>DoWheels</h3>
+          <p>
+            DoWheels is a privacy-first mobile application for managing vehicle
+            service documents. Users can capture, store, and access important
+            documents locally on their device — no accounts, no tracking, no
+            data collection.
+          </p>
+          <div class="project-meta">
+            <span>📅 <strong>2026</strong></span>
+            <span>📦 <strong>Android</strong></span>
+            <span>🔐 <strong>Privacy-first</strong></span>
+          </div>
+          <a href="privacy-policy.html" class="btn btn-outline" style="font-size:14px;padding:10px 24px;">
+            View Privacy Policy
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="project-visual">
+          <div class="phone-mock">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="app-logo-sm">D</div>
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="pill"></div>
+              <div class="line"></div>
+              <div class="line short"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <span class="section-label">About</span>
+      <h2>The person behind <span>Tanva Tech</span></h2>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <span class="initials">TT</span>
+          <span class="status-ring"></span>
+        </div>
+        <div class="about-content">
+          <h3>Hi, I'm the founder of Tanva Tech.</h3>
+          <p>
+            I'm a solo developer and designer passionate about building
+            digital products that solve real problems. Tanva Tech is my
+            independent studio where I bring ideas to life — from the first
+            line of code to the final pixel.
+          </p>
+          <p>
+            I believe in simplicity, privacy, and craftsmanship. Every product
+            I build is designed to be fast, intuitive, and respectful of the
+            people who use it. No dark patterns, no data harvesting — just
+            thoughtful software.
+          </p>
+          <div class="about-tags">
+            <span>Flutter</span>
+            <span>React Native</span>
+            <span>Firebase</span>
+            <span>UI Design</span>
+            <span>Product Strategy</span>
+            <span>Privacy-first</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <span class="section-label">Get in touch</span>
+        <h2>Let's build something <span>great</span></h2>
+        <p class="section-sub">
+          Have a project in mind? I'm always open to discussing new ideas,
+          collaborations, or just chatting about product development.
+        </p>
+        <a href="mailto:tanvatechinfo@gmail.com" class="contact-email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          tanvatechinfo@gmail.com
+        </a>
+        <p class="contact-note">
+          I typically respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        © 2026 <strong>Tanva Tech</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPT ========== -->
+  <script>
+    (function() {
+      // mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const navLinks = document.getElementById('navLinks');
+
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+        });
+
+        // close menu on link click (mobile)
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+          });
+        });
+      }
+
+      // smooth scroll for anchor links (already handled by CSS, but adding fallback)
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
