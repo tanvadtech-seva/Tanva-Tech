@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — Tanva Tech</title>
+    <meta
+      name="description"
+      content="General Terms of Service for Tanva Tech and its digital products."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #d96d00;
+        --primary-light: #f58a2e;
+        --primary-dark: #a95000;
+        --text: #1a1a1a;
+        --muted: #5a5a5a;
+        --bg: #faf9f7;
+        --surface: #ffffff;
+        --border: #eae6e1;
+        --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.02);
+        --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.04);
+        --radius-sm: 12px;
+        --radius-md: 20px;
+        --radius-lg: 28px;
+        --transition: 0.25s cubic-bezier(0.2, 0, 0, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ---------- HEADER ---------- */
+      .page-header {
+        background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+        color: #fff;
+        padding: 100px 24px 70px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -15%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(217, 109, 0, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .page-header .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        backdrop-filter: blur(4px);
+      }
+
+      .page-header h1 {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+
+      .page-header p {
+        font-size: 17px;
+        opacity: 0.85;
+        max-width: 600px;
+        line-height: 1.7;
+      }
+
+      .last-updated {
+        font-size: 14px;
+        opacity: 0.6;
+        margin-top: 16px;
+      }
+
+      /* ---------- CONTENT ---------- */
+      .content {
+        padding: 50px 0 80px;
+      }
+
+      .toc {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 28px 32px;
+        margin-bottom: 28px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .toc h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: var(--text);
+        letter-spacing: -0.01em;
+      }
+
+      .toc ol {
+        padding-left: 20px;
+        margin: 0;
+        columns: 2;
+        column-gap: 32px;
+      }
+
+      .toc li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        break-inside: avoid;
+      }
+
+      .toc a {
+        color: var(--muted);
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+
+      .toc a:hover {
+        color: var(--primary);
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 40px 42px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow-sm);
+        transition: box-shadow var(--transition);
+      }
+
+      .card:hover {
+        box-shadow: var(--shadow-md);
+      }
+
+      .card h2 {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 18px;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .card h2 .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: rgba(217, 109, 0, 0.08);
+        color: var(--primary);
+        font-size: 15px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .card h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .card p {
+        font-size: 15px;
+        color: var(--muted);
+        margin-bottom: 14px;
+        line-height: 1.75;
+      }
+
+      .card ul {
+        padding-left: 22px;
+        margin: 10px 0 16px;
+      }
+
+      .card li {
+        font-size: 15px;
+        color: var(--muted);
+        margin-bottom: 8px;
+        line-height: 1.65;
+      }
+
+      .highlight-box {
+        background: #fff7ef;
+        border-left: 4px solid var(--primary);
+        padding: 18px 22px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .highlight-box strong {
+        color: var(--primary-dark);
+      }
+
+      .warning-box {
+        background: #fef2f2;
+        border-left: 4px solid #dc2626;
+        padding: 18px 22px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .warning-box strong {
+        color: #dc2626;
+      }
+
+      .contact-box {
+        background: #fff7ef;
+        border: 1px solid #f2d5b9;
+        border-radius: var(--radius-sm);
+        padding: 24px 28px;
+        margin-top: 16px;
+      }
+
+      .contact-box p {
+        margin-bottom: 6px;
+        color: var(--text);
+        font-size: 15px;
+      }
+
+      .contact-box a {
+        color: var(--primary-dark);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .contact-box a:hover {
+        text-decoration: underline;
+      }
+
+      /* ---------- BACK LINK ---------- */
+      .back-wrap {
+        margin-bottom: 24px;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+
+      .back-link:hover {
+        color: var(--primary);
+      }
+
+      /* ---------- FOOTER ---------- */
+      .page-footer {
+        text-align: center;
+        padding: 36px 24px 50px;
+        font-size: 14px;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+      }
+
+      .page-footer a {
+        color: var(--primary-dark);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .page-footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 640px) {
+        .page-header {
+          padding: 80px 20px 50px;
+        }
+
+        .card {
+          padding: 28px 22px;
+        }
+
+        .card h2 {
+          font-size: 20px;
+        }
+
+        .toc ol {
+          columns: 1;
+        }
+
+        .toc {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="page-header">
+      <div class="container">
+        <div class="header-badge">📋 Legal</div>
+        <h1>Terms of Service</h1>
+        <p>
+          These Terms of Service govern your use of Tanva Tech's websites,
+          applications, and digital products.
+        </p>
+        <p class="last-updated">Last Updated: October 4, 2026</p>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content">
+      <div class="container">
+        <div class="back-wrap">
+          <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M13 8H3M7 4L3 8l4 4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Back to Home
+          </a>
+        </div>
+
+        <!-- INTRO -->
+        <div class="card">
+          <p style="font-size: 16px">
+            Welcome to Tanva Tech. These Terms of Service ("Terms") govern your
+            access to and use of our websites, mobile applications, and other
+            digital products and services (collectively, the "Services").
+          </p>
+          <p>
+            By accessing or using our Services, you agree to be bound by these
+            Terms. If you do not agree with any part of these Terms, please do
+            not use our Services.
+          </p>
+          <p>
+            These Terms apply to all visitors, users, and others who access or
+            use the Services.
+          </p>
+        </div>
+
+        <!-- TOC -->
+        <div class="toc">
+          <h3>Contents</h3>
+          <ol>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#use">Acceptable Use</a></li>
+            <li><a href="#accounts">Accounts &amp; Authentication</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#user-content">User Content</a></li>
+            <li><a href="#third-party">Third-Party Services</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#indemnity">Indemnification</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#changes">Changes to Terms</a></li>
+            <li><a href="#governing">Governing Law</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ol>
+        </div>
+
+        <!-- 1 -->
+        <section class="card" id="acceptance">
+          <h2><span class="num">1</span> Acceptance of Terms</h2>
+          <p>
+            By downloading, installing, accessing, or using any Tanva Tech
+            Service, you acknowledge that you have read, understood, and agree
+            to be bound by these Terms, as well as our
+            <a
+              href="privacy-policy.html"
+              style="
+                color: var(--primary-dark);
+                font-weight: 600;
+                text-decoration: none;
+              "
+              >Privacy Policy</a
+            >.
+          </p>
+          <p>
+            If you are using the Services on behalf of an organization, you
+            represent and warrant that you have the authority to bind that
+            organization to these Terms.
+          </p>
+        </section>
+
+        <!-- 2 -->
+        <section class="card" id="eligibility">
+          <h2><span class="num">2</span> Eligibility</h2>
+          <p>
+            Our Services are intended for general audiences. By using the
+            Services, you represent that you are at least the age of majority in
+            your jurisdiction, or that you have parental or guardian consent to
+            use the Services.
+          </p>
+          <p>
+            If you are under the age of majority, you may use the Services only
+            with the involvement of a parent or guardian.
+          </p>
+        </section>
+
+        <!-- 3 -->
+        <section class="card" id="use">
+          <h2><span class="num">3</span> Acceptable Use</h2>
+          <p>
+            You agree to use our Services only for lawful purposes and in
+            accordance with these Terms. You agree not to:
+          </p>
+          <ul>
+            <li>
+              Use the Services in any way that violates applicable laws or
+              regulations
+            </li>
+            <li>
+              Attempt to gain unauthorized access to any part of the Services
+            </li>
+            <li>
+              Interfere with or disrupt the integrity or performance of the
+              Services
+            </li>
+            <li>
+              Reverse engineer, decompile, or disassemble any part of the
+              Services
+            </li>
+            <li>Use the Services to transmit malware, spam, or harmful code</li>
+            <li>
+              Impersonate any person or entity, or misrepresent your affiliation
+            </li>
+            <li>
+              Collect or harvest information about other users without consent
+            </li>
+            <li>Use the Services for any fraudulent or illegal purpose</li>
+          </ul>
+          <div class="warning-box">
+            <strong>Violation:</strong> We reserve the right to suspend or
+            terminate your access to the Services if you violate these Terms.
+          </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="card" id="accounts">
+          <h2><span class="num">4</span> Accounts &amp; Authentication</h2>
+          <p>
+            Some Services may allow or require you to authenticate using a
+            third-party provider such as Google Sign-In. You are responsible for
+            maintaining the confidentiality of your account credentials and for
+            all activity that occurs under your account.
+          </p>
+          <p>
+            You agree to notify us immediately of any unauthorized use of your
+            account or any other breach of security.
+          </p>
+        </section>
+
+        <!-- 5 -->
+        <section class="card" id="ip">
+          <h2><span class="num">5</span> Intellectual Property</h2>
+          <p>
+            All content, features, and functionality of the Services — including
+            but not limited to text, graphics, logos, icons, images, audio
+            clips, software, and code — are the exclusive property of Tanva Tech
+            or its licensors and are protected by copyright, trademark, and
+            other intellectual property laws.
+          </p>
+          <p>
+            You may not reproduce, distribute, modify, create derivative works
+            of, publicly display, or exploit any part of the Services without
+            our prior written permission.
+          </p>
+        </section>
+
+        <!-- 6 -->
+        <section class="card" id="user-content">
+          <h2><span class="num">6</span> User Content</h2>
+          <p>
+            You may be able to create, store, or share content through our
+            Services (such as documents, photos, or other materials). You retain
+            ownership of any content you create.
+          </p>
+          <p>
+            By using the Services, you grant Tanva Tech a limited, non-exclusive
+            license to process your content solely as necessary to provide the
+            Services to you.
+          </p>
+          <p>
+            You are solely responsible for the content you create, store, or
+            share, and for ensuring that you have the necessary rights to do so.
+          </p>
+        </section>
+
+        <!-- 7 -->
+        <section class="card" id="third-party">
+          <h2><span class="num">7</span> Third-Party Services</h2>
+          <p>
+            Our Services may integrate with or link to third-party websites,
+            platforms, or services. We do not control and are not responsible
+            for the content, privacy practices, or terms of any third-party
+            services.
+          </p>
+          <p>
+            Your use of third-party services is at your own risk and subject to
+            their respective terms and policies.
+          </p>
+        </section>
+
+        <!-- 8 -->
+        <section class="card" id="privacy">
+          <h2><span class="num">8</span> Privacy</h2>
+          <p>
+            Your use of our Services is also governed by our
+            <a
+              href="privacy-policy.html"
+              style="
+                color: var(--primary-dark);
+                font-weight: 600;
+                text-decoration: none;
+              "
+              >Privacy Policy</a
+            >, which explains how we handle information. By using the Services,
+            you consent to our data practices as described in the Privacy
+            Policy.
+          </p>
+        </section>
+
+        <!-- 9 -->
+        <section class="card" id="disclaimer">
+          <h2><span class="num">9</span> Disclaimer of Warranties</h2>
+          <p>
+            Our Services are provided on an "as is" and "as available" basis,
+            without warranties of any kind, whether express or implied.
+          </p>
+          <p>
+            To the fullest extent permitted by law, Tanva Tech disclaims all
+            warranties, including but not limited to implied warranties of
+            merchantability, fitness for a particular purpose, and
+            non-infringement.
+          </p>
+          <p>
+            We do not warrant that the Services will be uninterrupted, secure,
+            error-free, or free of harmful components.
+          </p>
+        </section>
+
+        <!-- 10 -->
+        <section class="card" id="liability">
+          <h2><span class="num">10</span> Limitation of Liability</h2>
+          <p>
+            To the fullest extent permitted by law, Tanva Tech shall not be
+            liable for any indirect, incidental, special, consequential, or
+            punitive damages arising out of or related to your use of the
+            Services.
+          </p>
+          <p>
+            This includes, but is not limited to, loss of data, loss of profits,
+            or business interruption, even if we have been advised of the
+            possibility of such damages.
+          </p>
+          <p>
+            Our total liability to you for any claim arising from these Terms or
+            the Services shall not exceed the amount you paid to us, if any, for
+            the Services in the twelve months preceding the claim.
+          </p>
+        </section>
+
+        <!-- 11 -->
+        <section class="card" id="indemnity">
+          <h2><span class="num">11</span> Indemnification</h2>
+          <p>
+            You agree to indemnify, defend, and hold harmless Tanva Tech and its
+            officers, directors, employees, and agents from any claims,
+            liabilities, damages, losses, or expenses arising out of or related
+            to your use of the Services or your violation of these Terms.
+          </p>
+        </section>
+
+        <!-- 12 -->
+        <section class="card" id="termination">
+          <h2><span class="num">12</span> Termination</h2>
+          <p>
+            We reserve the right to suspend or terminate your access to the
+            Services at any time, without notice, for conduct that we believe
+            violates these Terms or is harmful to other users, us, or third
+            parties.
+          </p>
+          <p>
+            Upon termination, your right to use the Services will immediately
+            cease. Provisions of these Terms that by their nature should survive
+            termination shall survive.
+          </p>
+        </section>
+
+        <!-- 13 -->
+        <section class="card" id="changes">
+          <h2><span class="num">13</span> Changes to Terms</h2>
+          <p>
+            We may update these Terms from time to time. When we make changes,
+            we will update the "Last Updated" date at the top of this page.
+          </p>
+          <p>
+            Your continued use of the Services after changes take effect
+            constitutes acceptance of the updated Terms. We encourage you to
+            review these Terms periodically.
+          </p>
+        </section>
+
+        <!-- 14 -->
+        <section class="card" id="governing">
+          <h2><span class="num">14</span> Governing Law</h2>
+          <p>
+            These Terms shall be governed by and construed in accordance with
+            applicable laws, without regard to conflict of law principles.
+          </p>
+          <p>
+            Any disputes arising from these Terms or the Services shall be
+            resolved in the appropriate courts of the applicable jurisdiction.
+          </p>
+        </section>
+
+        <!-- 15 -->
+        <section class="card" id="contact">
+          <h2><span class="num">15</span> Contact Us</h2>
+          <p>
+            If you have questions or concerns about these Terms of Service,
+            please contact us.
+          </p>
+          <div class="contact-box">
+            <p><strong>Tanva Tech</strong></p>
+            <p>
+              Email:
+              <a href="mailto:tanvatechinfo@gmail.com"
+                >tanvatechinfo@gmail.com</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- AGREEMENT -->
+        <div class="card">
+          <h2>Agreement</h2>
+          <p>
+            By using Tanva Tech's Services, you acknowledge that you have read,
+            understood, and agree to be bound by these Terms of Service.
+          </p>
+          <p>
+            If you do not agree with these Terms, please discontinue use of our
+            Services.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      © 2026 <strong>Tanva Tech</strong>. All rights reserved.<br />
+      <a href="index.html">Home</a> ·
+      <a href="terms-of-service.html">Terms of Service</a> ·
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+  </body>
+</html>
