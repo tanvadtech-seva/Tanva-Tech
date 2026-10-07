@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoWheels · Terms and Conditions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem;
+    }
+
+    .terms-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08), 0 8px 20px -6px rgba(0, 0, 0, 0.02);
+      padding: 2.5rem 2.5rem 3rem;
+      border: 1px solid #e9eef3;
+    }
+
+    /* header area */
+    .header {
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1.75rem;
+    }
+
+    .app-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      line-height: 1.2;
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+
+    .app-name span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #3b82f6;
+      background: #eff6ff;
+      padding: 0.2rem 0.9rem;
+      border-radius: 100px;
+      letter-spacing: 0.01em;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+      font-weight: 500;
+      background: #f1f5f9;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+    }
+
+    /* headings */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      color: #0f172a;
+      margin: 2.25rem 0 0.9rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+      padding-left: 0.25rem;
+    }
+
+    li strong {
+      color: #0f172a;
+    }
+
+    /* special blocks */
+    .intro-text {
+      background: #f1f8fe;
+      padding: 1.25rem 1.5rem;
+      border-radius: 18px;
+      border-left: 6px solid #3b82f6;
+      margin: 1.5rem 0 1rem;
+      font-size: 1rem;
+      color: #1e293b;
+    }
+
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* contact & copyright */
+    .contact-block {
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 1.25rem 1.75rem;
+      margin: 2rem 0 1.5rem;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-email {
+      font-weight: 600;
+      color: #0f172a;
+      font-size: 1.05rem;
+      word-break: break-word;
+    }
+
+    .contact-email a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px dotted #94a3b8;
+    }
+
+    .contact-email a:hover {
+      color: #1d4ed8;
+      border-bottom-color: #1d4ed8;
+    }
+
+    .copyright {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .copyright .brand {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* code-like email fix — but it's a typo in original; we keep as is */
+    .email-typo {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: #f1f5f9;
+      padding: 0.1rem 0.3rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.75rem;
+      }
+      .terms-container {
+        padding: 1.75rem 1.25rem 2.25rem;
+        border-radius: 20px;
+      }
+      .app-name {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      .contact-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      .copyright {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .app-name {
+        font-size: 1.6rem;
+      }
+      ul, ol {
+        margin-left: 1.2rem;
+      }
+    }
+
+    /* subtle scroll */
+    ::selection {
+      background: #bfdbfe;
+      color: #0f172a;
+    }
+
+    /* anchor clean */
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* dotted separator between sections for readability */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, #e2e8f0, transparent);
+      margin: 0.5rem 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="terms-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="app-name">
+        DoWheels <span>Terms &amp; Conditions</span>
+      </div>
+      <div class="last-updated">Last Updated: October 7, 2026</div>
+    </div>
+
+    <!-- 1. Introduction -->
+    <section>
+      <h2>1. Introduction</h2>
+      <p>Welcome to DoWheels.</p>
+      <p>These Terms and Conditions ("Terms", "Terms and Conditions") govern your access to and use of the DoWheels mobile application ("DoWheels", "App"), operated by <strong>Tanva Tech</strong> ("we", "us", or "our").</p>
+      <p>DoWheels is designed to help users store, organize, manage, and maintain information relating to their own vehicles, including vehicle details, documents, service information, photographs, and other related records.</p>
+      <p>By downloading, accessing, or using DoWheels, you agree to be bound by these Terms. If you do not agree with these Terms, please discontinue use of the App.</p>
+    </section>
+
+    <!-- 2. Eligibility -->
+    <section>
+      <h2>2. Eligibility</h2>
+      <p>DoWheels is available for use by individuals of any age.</p>
+      <p>If you are a minor, you should use the App with the knowledge and permission of your parent or legal guardian.</p>
+      <p>By using DoWheels, you represent that you have the legal capacity, or the required permission from your parent or guardian, to use the App and agree to these Terms.</p>
+    </section>
+
+    <!-- 3. Purpose of DoWheels -->
+    <section>
+      <h2>3. Purpose of DoWheels</h2>
+      <p>DoWheels is a personal vehicle information management application.</p>
+      <p>The App allows users to store and manage information relating to their vehicles, which may include, but is not limited to:</p>
+      <ul>
+        <li>Vehicle registration details</li>
+        <li>Vehicle make, model, and variant</li>
+        <li>Vehicle identification information</li>
+        <li>Purchase and ownership information</li>
+        <li>Insurance information</li>
+        <li>Registration Certificate (RC) information</li>
+        <li>Pollution Under Control (PUC) information</li>
+        <li>Service and maintenance records</li>
+        <li>Repair records</li>
+        <li>Vehicle photographs</li>
+        <li>Vehicle-related documents</li>
+        <li>Warranty information</li>
+        <li>Important dates and reminders</li>
+        <li>Other vehicle-related information entered by the user</li>
+      </ul>
+      <p>DoWheels is intended to provide users with a convenient way to organize their own vehicle information.</p>
+    </section>
+
+    <!-- 4. User Responsibility for Information -->
+    <section>
+      <h2>4. User Responsibility for Information</h2>
+      <p>You are responsible for the accuracy, completeness, and legality of the information you enter into DoWheels.</p>
+      <p>You acknowledge that:</p>
+      <ul>
+        <li>You should enter accurate information wherever possible.</li>
+        <li>You are responsible for verifying important vehicle information against official documents and records.</li>
+        <li>DoWheels does not independently verify the information entered by users.</li>
+        <li>DoWheels should not be considered an official government, insurance, vehicle registration, or legal record.</li>
+        <li>You should not rely solely on information stored in the App when making decisions that require official or legally valid documentation.</li>
+      </ul>
+      <p>You are responsible for maintaining the original copies of important vehicle documents.</p>
+    </section>
+
+    <!-- 5. Storage of Your Data -->
+    <section>
+      <h2>5. Storage of Your Data</h2>
+      <p>DoWheels is designed to store your vehicle information locally on your device.</p>
+      <p>Information and documents entered or added to the App may remain stored on your device unless you delete them.</p>
+      <p>You are responsible for maintaining the security of your device and protecting access to your locally stored information.</p>
+      <p>If you uninstall the App, clear its data, reset your device, lose your device, or otherwise remove the locally stored application data, information that has not been backed up or synchronized may become unavailable.</p>
+    </section>
+
+    <!-- 6. Google Sign-In and Google Drive Synchronization -->
+    <section>
+      <h2>6. Google Sign-In and Google Drive Synchronization</h2>
+      <p>DoWheels may provide Google Sign-In as an optional authentication method.</p>
+      <p>If you choose to use Google Sign-In and Google Drive synchronization, DoWheels may use the permissions granted by you to synchronize your DoWheels data with your <strong>own Google Drive account</strong>.</p>
+      <p>The synchronized data is stored in your Google Drive and is subject to Google's applicable terms, policies, security measures, and availability.</p>
+      <p>You understand and agree that:</p>
+      <ul>
+        <li>Google Drive synchronization is optional.</li>
+        <li>You are responsible for the Google Account used with DoWheels.</li>
+        <li>You are responsible for maintaining the security of your Google Account.</li>
+        <li>You should ensure that sufficient Google Drive storage is available for synchronization.</li>
+        <li>Synchronization may depend on your internet connection, Google Drive availability, device settings, and other technical conditions.</li>
+        <li>Tanva Tech does not guarantee that synchronization will always be available or error-free.</li>
+        <li>Tanva Tech is not responsible for the availability, operation, security, or policies of Google Drive.</li>
+        <li>Changes, deletion, corruption, or loss of data within your Google Drive may affect synchronized DoWheels data.</li>
+      </ul>
+      <p>You should periodically verify that important information has been successfully synchronized or otherwise backed up.</p>
+    </section>
+
+    <!-- 7. Deletion of Data -->
+    <section>
+      <h2>7. Deletion of Data</h2>
+      <p>DoWheels allows users to delete vehicle records and other information stored within the App, subject to the functionality available in the current version of the App.</p>
+      <p>When you delete information from the App, the information may be removed from the local storage of your device.</p>
+      <p>If the information has previously been synchronized with Google Drive, a copy may continue to exist in your Google Drive depending on the synchronization and deletion behavior implemented by the App.</p>
+      <p>You are responsible for managing your Google Drive files and backups.</p>
+    </section>
+
+    <!-- 8. Google Services -->
+    <section>
+      <h2>8. Google Services</h2>
+      <p>DoWheels may use Google services, including Google Sign-In and Google Drive, to provide optional authentication and synchronization functionality.</p>
+      <p>Your use of these Google services is also subject to Google's applicable terms and policies.</p>
+      <p>Tanva Tech does not control Google's services and is not responsible for changes, interruptions, outages, security incidents, or other issues affecting Google services.</p>
+    </section>
+
+    <!-- 9. User Content and Documents -->
+    <section>
+      <h2>9. User Content and Documents</h2>
+      <p>You may add vehicle-related information, photographs, documents, and other content to DoWheels.</p>
+      <p>You retain ownership of the information and content that you provide.</p>
+      <p>By using the App, you represent that you have the necessary rights and permissions to store the information, photographs, documents, and other content that you add to DoWheels.</p>
+      <p>You must not use DoWheels to knowingly store or distribute unlawful, fraudulent, infringing, harmful, or unauthorized content.</p>
+    </section>
+
+    <!-- 10. Prohibited Use -->
+    <section>
+      <h2>10. Prohibited Use</h2>
+      <p>You agree not to use DoWheels:</p>
+      <ul>
+        <li>For any unlawful purpose.</li>
+        <li>To store or distribute content that violates applicable laws.</li>
+        <li>To attempt to gain unauthorized access to the App or its systems.</li>
+        <li>To interfere with or disrupt the operation of the App.</li>
+        <li>To reverse engineer, decompile, or attempt to obtain the source code of the App except where permitted by applicable law.</li>
+        <li>To exploit vulnerabilities or security weaknesses in the App.</li>
+        <li>To impersonate another person or entity.</li>
+        <li>To use the App for fraudulent or malicious purposes.</li>
+        <li>To misuse Google authentication or Google Drive synchronization.</li>
+        <li>To upload content that you do not have the right or permission to use.</li>
+      </ul>
+    </section>
+
+    <!-- 11. App Availability -->
+    <section>
+      <h2>11. App Availability</h2>
+      <p>We aim to keep DoWheels available and functional, but we do not guarantee that the App will always be available, uninterrupted, or error-free.</p>
+      <p>The App may occasionally be unavailable because of:</p>
+      <ul>
+        <li>Maintenance</li>
+        <li>Updates</li>
+        <li>Technical issues</li>
+        <li>Device-related issues</li>
+        <li>Internet connectivity problems</li>
+        <li>Operating system changes</li>
+        <li>Third-party service interruptions</li>
+        <li>Google service interruptions</li>
+        <li>Circumstances beyond our reasonable control</li>
+      </ul>
+      <p>We may modify, update, suspend, or discontinue some or all features of DoWheels at any time.</p>
+    </section>
+
+    <!-- 12. Software Updates -->
+    <section>
+      <h2>12. Software Updates</h2>
+      <p>DoWheels may receive updates, improvements, bug fixes, security updates, or changes to functionality.</p>
+      <p>You agree that keeping the App updated may be necessary to maintain compatibility, security, and functionality.</p>
+      <p>Some features may change or become unavailable as the App evolves.</p>
+    </section>
+
+    <!-- 13. No Professional or Official Advice -->
+    <section>
+      <h2>13. No Professional or Official Advice</h2>
+      <p>DoWheels is an information storage and organization tool.</p>
+      <p>The App does not provide:</p>
+      <ul>
+        <li>Legal advice</li>
+        <li>Insurance advice</li>
+        <li>Financial advice</li>
+        <li>Mechanical or engineering certification</li>
+        <li>Government certification</li>
+        <li>Vehicle registration services</li>
+        <li>Official vehicle records</li>
+      </ul>
+      <p>Information stored in DoWheels should not be treated as a replacement for official government records, original vehicle documents, insurance documents, or professional advice.</p>
+    </section>
+
+    <!-- 14. Data Loss -->
+    <section>
+      <h2>14. Data Loss</h2>
+      <p>You acknowledge that electronic data can be lost, corrupted, damaged, or become inaccessible for various reasons.</p>
+      <p>Although we take reasonable measures in designing and maintaining the App, we cannot guarantee that your information will never be lost or corrupted.</p>
+      <p>You are responsible for maintaining appropriate backups of important vehicle information and documents.</p>
+      <p>Where Google Drive synchronization is available and enabled by you, you should verify that important information has been successfully synchronized.</p>
+    </section>
+
+    <!-- 15. Intellectual Property -->
+    <section>
+      <h2>15. Intellectual Property</h2>
+      <p>DoWheels, including its software, design, user interface, branding, logos, graphics, text, and other original materials provided by Tanva Tech, is owned by or licensed to Tanva Tech and is protected by applicable intellectual property laws.</p>
+      <p>Except as expressly permitted by these Terms or applicable law, you may not:</p>
+      <ul>
+        <li>Copy the App or its components.</li>
+        <li>Modify or create derivative works from the App.</li>
+        <li>Redistribute or commercially exploit the App.</li>
+        <li>Remove proprietary notices or branding.</li>
+        <li>Use Tanva Tech or DoWheels trademarks without permission.</li>
+      </ul>
+      <p>Your own vehicle information and content remain yours.</p>
+    </section>
+
+    <!-- 16. Third-Party Services -->
+    <section>
+      <h2>16. Third-Party Services</h2>
+      <p>DoWheels may depend on third-party services, including Google services, for certain functionality.</p>
+      <p>Third-party services may have their own terms, conditions, privacy policies, and service limitations.</p>
+      <p>We are not responsible for the policies, availability, performance, or actions of third-party services.</p>
+      <p>Your use of a third-party service through DoWheels may therefore be subject to that third party's terms and policies.</p>
+    </section>
+
+    <!-- 17. Privacy -->
+    <section>
+      <h2>17. Privacy</h2>
+      <p>Your privacy is important to us.</p>
+      <p>Our Privacy Policy explains how DoWheels handles information, permissions, local storage, Google Sign-In, and related data practices.</p>
+      <p>By using DoWheels, you acknowledge that you have reviewed our Privacy Policy.</p>
+    </section>
+
+    <!-- 18. Disclaimer of Warranties -->
+    <section>
+      <h2>18. Disclaimer of Warranties</h2>
+      <p>To the maximum extent permitted by applicable law, DoWheels is provided on an "as is" and "as available" basis.</p>
+      <p>We do not guarantee that:</p>
+      <ul>
+        <li>The App will always be available.</li>
+        <li>The App will be completely free from errors or bugs.</li>
+        <li>All information stored in the App will always remain available.</li>
+        <li>Google Drive synchronization will always operate without interruption.</li>
+        <li>Data synchronization will always occur successfully.</li>
+        <li>The App will be compatible with every device or operating system version.</li>
+        <li>The App will meet every individual user's requirements.</li>
+      </ul>
+      <p>You use the App at your own discretion and risk.</p>
+    </section>
+
+    <!-- 19. Limitation of Liability -->
+    <section>
+      <h2>19. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, Tanva Tech and its owners, employees, developers, affiliates, and service providers shall not be liable for any indirect, incidental, consequential, special, or other losses arising from or related to your use of DoWheels.</p>
+      <p>This may include, without limitation:</p>
+      <ul>
+        <li>Loss of locally stored data</li>
+        <li>Loss or corruption of vehicle information</li>
+        <li>Loss of documents or photographs</li>
+        <li>Loss resulting from synchronization issues</li>
+        <li>Loss resulting from Google Drive or other third-party service failures</li>
+        <li>Loss resulting from device damage, loss, theft, or failure</li>
+        <li>Loss resulting from unauthorized access to your device or Google Account</li>
+        <li>Loss resulting from reliance on information stored in the App</li>
+      </ul>
+      <p>Nothing in these Terms is intended to exclude or limit liability that cannot legally be excluded or limited under applicable Indian law.</p>
+    </section>
+
+    <!-- 20. User Account and Google Account Security -->
+    <section>
+      <h2>20. User Account and Google Account Security</h2>
+      <p>If you use Google Sign-In, you are responsible for maintaining the confidentiality and security of your Google Account and device.</p>
+      <p>You should:</p>
+      <ul>
+        <li>Use appropriate device security.</li>
+        <li>Protect your Google Account credentials.</li>
+        <li>Enable appropriate security features offered by Google.</li>
+        <li>Sign out of accounts on devices that you no longer control.</li>
+        <li>Immediately take appropriate action if you believe your account or device has been compromised.</li>
+      </ul>
+      <p>Tanva Tech will not be responsible for losses resulting from your failure to adequately secure your device or Google Account, except to the extent caused by our own legally actionable conduct.</p>
+    </section>
+
+    <!-- 21. Suspension or Termination -->
+    <section>
+      <h2>21. Suspension or Termination</h2>
+      <p>We may suspend or terminate access to DoWheels if we reasonably believe that you:</p>
+      <ul>
+        <li>Have violated these Terms.</li>
+        <li>Have used the App unlawfully.</li>
+        <li>Have attempted to compromise the App or its security.</li>
+        <li>Have abused or misused the App.</li>
+        <li>Have engaged in fraudulent or harmful activity.</li>
+      </ul>
+      <p>You may stop using DoWheels at any time.</p>
+      <p>Termination or discontinuation of your use of the App does not necessarily delete information stored in your Google Drive. You remain responsible for managing your own Google Drive data.</p>
+    </section>
+
+    <!-- 22. Changes to These Terms -->
+    <section>
+      <h2>22. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time to reflect:</p>
+      <ul>
+        <li>Changes to DoWheels.</li>
+        <li>New or modified features.</li>
+        <li>Changes to our practices.</li>
+        <li>Changes to third-party services.</li>
+        <li>Changes in applicable laws or regulations.</li>
+      </ul>
+      <p>When we update these Terms, we will update the "Last Updated" date displayed at the top of this page.</p>
+      <p>Your continued use of DoWheels after updated Terms become effective constitutes your acceptance of the updated Terms, to the extent permitted by applicable law.</p>
+    </section>
+
+    <!-- 23. Governing Law -->
+    <section>
+      <h2>23. Governing Law</h2>
+      <p>These Terms shall be governed by and interpreted in accordance with the laws of <strong>India</strong>.</p>
+      <p>Any disputes arising out of or relating to DoWheels or these Terms shall be subject to the applicable courts and legal authorities in India, subject to applicable law.</p>
+    </section>
+
+    <!-- 24. Severability -->
+    <section>
+      <h2>24. Severability</h2>
+      <p>If any provision of these Terms is found to be invalid, unlawful, or unenforceable, that provision shall be interpreted or modified to the minimum extent necessary to make it enforceable, where legally permitted.</p>
+      <p>The remaining provisions of these Terms shall continue to remain in effect.</p>
+    </section>
+
+    <!-- 25. Entire Agreement -->
+    <section>
+      <h2>25. Entire Agreement</h2>
+      <p>These Terms, together with the DoWheels Privacy Policy and any other applicable terms or notices provided within the App, constitute the agreement between you and Tanva Tech regarding your use of DoWheels, subject to applicable law.</p>
+    </section>
+
+    <!-- 26. Contact Us -->
+    <section>
+      <h2>26. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding these Terms and Conditions or DoWheels, please contact us.</p>
+      <div class="contact-block">
+        <div class="contact-email">
+          <strong>Tanva Tech</strong><br>
+          Email: <a href="mailto:tanvatechinfo@gamil.com" class="email-typo">tanvatechinfo@gamil.com</a>
+        </div>
+      </div>
+      <!-- note: email domain is intentionally as provided (gamil.com) -->
+    </section>
+
+    <!-- 27. Acceptance -->
+    <section>
+      <h2>27. Acceptance</h2>
+      <p>By downloading, accessing, or using DoWheels, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.</p>
+      <p>If you do not agree with these Terms, please discontinue use of DoWheels.</p>
+    </section>
+
+    <!-- footer / copyright -->
+    <div class="copyright">
+      <span class="brand">© 2026 Tanva Tech. All rights reserved.</span>
+      <span>DoWheels Terms and Conditions</span>
+    </div>
+  </div>
+</body>
+</html>
